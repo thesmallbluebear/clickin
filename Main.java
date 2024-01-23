@@ -3,14 +3,10 @@
 Point BUTTON_ACCEPT = Point.get(945,717); // подтвердить
 Point BUTTON_OK = Point.get(1118,738); // ok
 Point BUTTON_ONLY_MINE = Point.get(711,364); //ГАЛОЧКА [ТОЛЬКО МОИ ЗАПРОСЫ]
-// Commented this, beacause i don't know, how it's would working.
-// Point BUTTON_PREV = Point.get(250,975);// назад 
 
 //BUY BUTTON
-/* 
- * Here we has calculate on every step in cycle, where is coordinate for button.
- * I guess, better decision was use variable and array, check this later. 
- */
+// Here we has calculate on every step in cycle, where is coordinate for button.
+// I guess, better decision was use variable and array, check this later. 
 final int BUTTON_BUY_X = 1705;
 final int[] BUTTON_BUY_Y = {470, 584, 698, 812};
 
@@ -23,10 +19,7 @@ static final byte HEIGHT_ITEM = 114; // Height lot area
 static final byte VISIBLE_ITEM = 4; // Count lots availibale for checking (guess we can 5)
 final int LIST_UPDATE_TIME = 8000; // Speed update list from "SOLD"
 
-/* 
-* internal function PerfectClick
-* 0 - every 30 frame, 1 - every 15 frame, 2 - all frames
-*/
+// Internal func PerfectClick
 startScreenCapture(2);
 
 //TIME
