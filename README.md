@@ -1,2 +1,7 @@
-# clickin
-script for PerfectClick on game stndff2
+# CLICKIN
+PerfectClick scrpit for the game Standoff 2 
+
+## TaskList
+- [ ]
+- [ ]
+ 
