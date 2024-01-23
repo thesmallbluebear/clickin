@@ -5,3 +5,6 @@ PerfectClick scrpit for the game Standoff 2
 - [ ]
 - [ ]
  
+## ISSUES
+- []
+- [x]
