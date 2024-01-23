@@ -11,19 +11,23 @@ int BUTTON_BUY_X = 1705;
 int[] BUTTON_BUY_Y = {470, 584, 698, 812};
 
 // STICKERS CHECK AREA
-Point stickerLeftTop = Point.get(1222, 446);
-Point stickerRightBottom = Point.get(1263, 495);
+// Point stickerLeftTop = Point.get(1222,446);
+// Point stickerRightBottom = Point.get(1263,495);
+
+Point left = Point.get(1222,446); // Верхний левый угол [2] наклейки
+Point right = Point.get(1263,495); // Нижний правый угол [2] наклейки
+Point leftTop = Point.get();
+Point rightBot = Point.get();
 
 //LOTS
-byte HEIGHT_ITEM = 114; // Height lot area
-byte VISIBLE_ITEM = 4; // Count lots availibale for checking (guess we can 5)
+int HEIGHT_ITEM = 114; // Height lot area
+int VISIBLE_ITEM = 4; // Count lots availibale for checking (guess we can 5)
 int LIST_UPDATE_TIME = 8000; // Speed update list from "SOLD"
 
 // Internal func PerfectClick
 startScreenCapture(2);
 
 //TIME
-// for update list
 long startScriptTime = Time.getMillis();
 
 //TEST
@@ -32,12 +36,17 @@ int purchases = 0;
 //MAIN
 // Review this section later. Doesn't know what means !EXIT, only guess it. 
 while (!EXIT) {
-    for (byte i = 0; i < VISIBLE_ITEM; i++) {
+    for (int i = 0; i < VISIBLE_ITEM; i++) {
     
-        stickerLeftTop.y = stickerLeftTop.y + (i * HEIGHT_ITEM);
-        stickerRightBottom.y = stickerRightBottom.y + (i * HEIGHT_ITEM);
+        // stickerLeftTop.y = stickerLeftTop.y + (i * HEIGHT_ITEM);
+        // stickerRightBottom.y = stickerRightBottom.y + (i * HEIGHT_ITEM);
 
-        byte validatePurchase = getContoursCount(stickerLeftTop, stickerRightBottom);
+        leftTop.x = left.x;
+        rightBot.x = right.x;
+        leftTop.y = left.y + (i * HEIGHT_ITEM);
+        rightBot.y = right.y + (i * HEIGHT_ITEM);
+
+        int validatePurchase = getContoursCount(leftTop, rightBot);
 
         if (validatePurchase > 2 && getColor(BUTTON_BUY_X, BUTTON_BUY_Y[i]) < 11600000) {
             click(BUTTON_BUY_X, BUTTON_BUY_Y[i]);
