@@ -33,6 +33,9 @@ startScreenCapture(2);
 // for update list
 long startScriptTime = Time.getMillis();
 
+//TEST
+int purchases = 0;
+
 //MAIN
 // Review this section later. Doesn't know what means !EXIT, only guess it. 
 while (!EXIT) {
@@ -43,15 +46,19 @@ while (!EXIT) {
         int validatePurchase = getContoursCount(stickerLeftTop, stickerRightBottom);
 
         if (validatePurchase > 2 && getColor(BUTTON_BUY_X, BUTTON_BUY_Y[i]) < 11600000) {
-            click(BUTTON_BUY_X,BUTTON_BUY_Y[i]);
+            click(BUTTON_BUY_X, BUTTON_BUY_Y[i]);
             sleep(10);
-
             click(BUTTON_ACCEPT);
+
+            log("Contours: " + validatePurchase);
+            log("Purchase:" + purchases);
+            log("================================================");
+            purchases += 1;
             sleep(200);
 
             // Exit from window "SOLD", if got sold earlier, than we buy it.
             // 9467982 - color pixel on button. Need to replace that.
-            if(getColor(BUTTON_OK) == 9467982){
+            if (getColor(BUTTON_OK) == 9467982) {
                 click(BUTTON_OK);
             }
 
