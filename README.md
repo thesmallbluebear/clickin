@@ -13,5 +13,5 @@ PerfectClick script for the game Standoff 2
 - [ ] Resolve current [issues](#ISSUES).
  
 ### ISSUES
-- [ ] [Incorrect purchase](https://github.com/thesmallbluebear/clickin/issues/4)
+- [ ] [Incorrect purchase](https://github.com/thesmallbluebear/clickin/issues/3)
 - [ ] [Cancel lots](https://github.com/thesmallbluebear/clickin/issues/4)
