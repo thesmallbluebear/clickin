@@ -7,17 +7,17 @@ Point BUTTON_ONLY_MINE = Point.get(711,364); //ГАЛОЧКА [ТОЛЬКО МО
 //BUY BUTTON
 // Here we has calculate on every step in cycle, where is coordinate for button.
 // I guess, better decision was use variable and array, check this later. 
-final int BUTTON_BUY_X = 1705;
-final int[] BUTTON_BUY_Y = {470, 584, 698, 812};
+int BUTTON_BUY_X = 1705;
+int[] BUTTON_BUY_Y = {470, 584, 698, 812};
 
 // STICKERS CHECK AREA
 Point stickerLeftTop = Point.get(1222, 446);
 Point stickerRightBottom = Point.get(1263, 495);
 
 //LOTS
-static final byte HEIGHT_ITEM = 114; // Height lot area
-static final byte VISIBLE_ITEM = 4; // Count lots availibale for checking (guess we can 5)
-final int LIST_UPDATE_TIME = 8000; // Speed update list from "SOLD"
+byte HEIGHT_ITEM = 114; // Height lot area
+byte VISIBLE_ITEM = 4; // Count lots availibale for checking (guess we can 5)
+int LIST_UPDATE_TIME = 8000; // Speed update list from "SOLD"
 
 // Internal func PerfectClick
 startScreenCapture(2);
@@ -33,6 +33,7 @@ int purchases = 0;
 // Review this section later. Doesn't know what means !EXIT, only guess it. 
 while (!EXIT) {
     for (byte i = 0; i < VISIBLE_ITEM; i++) {
+    
         stickerLeftTop.y = stickerLeftTop.y + (i * HEIGHT_ITEM);
         stickerRightBottom.y = stickerRightBottom.y + (i * HEIGHT_ITEM);
 
