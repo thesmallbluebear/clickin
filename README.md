@@ -10,8 +10,8 @@ PerfectClick script for the game Standoff 2
 ## ```Version 0.1a```
 ### Tasklist 
 - [x] Add logging for purchase (included validate information)
-- [ ] Resolve current [issues](#ISSUES).
+- [X] Resolve current [issues](#ISSUES).
  
 ### ISSUES
-- [ ] [Incorrect purchase](https://github.com/thesmallbluebear/clickin/issues/3)
-- [ ] [Cancel lots](https://github.com/thesmallbluebear/clickin/issues/4)
+- [x] [Incorrect purchase](https://github.com/thesmallbluebear/clickin/issues/3)
+- [X] [Cancel lots](https://github.com/thesmallbluebear/clickin/issues/4)
