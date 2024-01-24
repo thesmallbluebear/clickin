@@ -40,7 +40,7 @@ while (!EXIT) {
             click(BUTTON_BUY_X, BUTTON_BUY_Y[i]);
             sleep(10);
             click(BUTTON_ACCEPT);
-            
+    
             //TEST
             log("================================================");
             log("Contours: " + validatePurchase);
@@ -57,16 +57,20 @@ while (!EXIT) {
     }
 
     if ((Time.getMillis() - startScriptTime) > LIST_UPDATE_TIME) {
-        //If we have bug with checkbox.
+        //If we have bug with checkbox
         if (getColor(BUTTON_REFRESH) != 6578005){
+
             click(BUTTON_REFRESH);
             sleep(50);
-        }
 
-        click(BUTTON_REFRESH);
-        sleep(50);
-        click(BUTTON_REFRESH); 
-        
+        } else {
+
+            click(BUTTON_REFRESH);
+            sleep(50);
+            click(BUTTON_REFRESH);
+            sleep(50);
+
+        }
         startScriptTime = Time.getMillis();
     }
 }
