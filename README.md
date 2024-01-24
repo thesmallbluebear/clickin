@@ -9,7 +9,7 @@ PerfectClick script for the game Standoff 2
 
 ## ```Version 0.1a```
 ### Tasklist 
-- [ ] Add logging for purchase (included validate information)
+- [x] Add logging for purchase (included validate information)
 - [ ] Resolve current [issues](#ISSUES).
  
 ### ISSUES
